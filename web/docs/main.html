@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Hardware-Based Prevention and Detection from Cyberattacks in IIoT</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+      background-color: #0a3d62;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 10%;
+      flex-wrap: wrap;
+    }
+
+    section:nth-child(even) {
+      background-color: #ffffff;
+    }
+
+    section:nth-child(odd) {
+      background-color: #eef2f7;
+    }
+
+    .text {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+    }
+
+    .text h2 {
+      color: #0a3d62;
+      margin-bottom: 10px;
+      font-size: 22px;
+      border-left: 5px solid #0a3d62;
+      padding-left: 10px;
+    }
+
+    .text p {
+      line-height: 1.6;
+    }
+
+    .image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .image img {
+      width: 80%;
+      max-width: 350px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 50px 10%;
+      background-color: #0a3d62;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
+      padding: 20px;
+      width: 250px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #0a3d62;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+      color: #0a3d62;
+    }
+
+    .card p {
+      margin: 4px 0;
+    }
+
+    .card a {
+      color: #0a3d62;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>REAL-TIME HARDWARE BASED PREVENTION AND DETECTION FROM CYBERATTACKS IN IIOT</h1>
+  </header>
+
+  <!-- Introduction -->
+  <section>
+    <div class="text">
+      <h2>Introduction</h2>
+      <p>The Industrial Internet of Things (IIoT) connects smart sensors, controllers, and cloud systems 
+         to automate and optimize industrial operations. However, this interconnected ecosystem introduces 
+         cybersecurity risks, especially during wireless data transmission between devices and the cloud. 
+         Attackers can exploit these channels to intercept or corrupt industrial data.</p>
+    </div>
+    <div class="image">
+      <img src="intro.png" alt="Introduction Image">
+    </div>
+  </section>
+
+  <!-- Problem Statement -->
+  <section>
+    <div class="image">
+      <img src="problem.jpg" alt="Problem Statement Image">
+    </div>
+    <div class="text">
+      <h2>Problem Statement</h2>
+      <p>IIoT protocols like MQTT and HTTP prioritize performance over security. 
+         As a result, unencrypted or unauthenticated data can be intercepted, spoofed, or manipulated, 
+         causing production disruptions and compromising system reliability. 
+         The missing hardware–software security layer increases exposure to real-time attacks.</p>
+    </div>
+  </section>
+
+  <!-- Proposed Solution -->
+  <section>
+    <div class="text">
+      <h2>Proposed Solution</h2>
+      <p>The system introduces a secure, hardware-backed communication model integrating AES encryption, 
+         SHA-256 hashing, consortium blockchain logging, and TinyML-based edge anomaly detection. 
+         This architecture ensures real-time prevention, detection, and response to cyber threats 
+         with minimal latency.</p>
+    </div>
+    <div class="image">
+      <img src="solution.png" alt="Proposed Solution Image">
+    </div>
+  </section>
+
+  <!-- Security Used -->
+  <section>
+    <div class="image">
+      <img src="Security.png" alt="Security Image">
+    </div>
+    <div class="text">
+      <h2>Security Used</h2>
+      <p>
+        <strong>AES Encryption</strong> – Protects data confidentiality.<br>
+        <strong>SHA-256 Hashing</strong> – Ensures integrity and authenticity.<br>
+        <strong>Consortium Blockchain</strong> – Provides tamper-proof verification.<br>
+        <strong>TinyML Detection</strong> – Identifies anomalies locally.<br>
+        <strong>Secure Cloud Dashboard</strong> – HTTPS + OAuth2 protection.
+      </p>
+    </div>
+  </section>
+
+  <!-- Conclusion -->
+  <section>
+    <div class="text">
+      <h2>Conclusion</h2>
+      <p>This framework delivers a real-time, intelligent, and resilient IIoT cybersecurity system. 
+         By combining encryption, blockchain, and AI-powered detection, it bridges the gap between 
+         hardware and cloud security — ensuring every data packet remains confidential, verifiable, 
+         and tamper-proof throughout its transmission journey.</p>
+    </div>
+  </section>
+
+  <!-- Cards Section -->
+  <div class="cards">
+
+    <div class="card">
+      <img src="person2.jpg" alt="Team Member">
+      <h3>Jai Vignesh K</h3>
+      <p>Department of CSE (Cyber Security)</p>
+      <p>Pre-Final Year</p>
+      <a href="https://linkedin.com/in/example2" target="_blank">LinkedIn Profile</a>
+    </div>
+
+    <div class="card">
+      <img src="person2.jpg" alt="Team Member">
+      <h3>Thirukumaran G</h3>
+      <p>Department of CSE (Cyber Security)</p>
+      <p>Pre-Final Year</p>
+      <a href="https://linkedin.com/in/example2" target="_blank">LinkedIn Profile</a>
+    </div>
+
+    <div class="card">
+      <img src="Person3.jpg" alt="Udhayakumar">
+      <h3>Udhayakumar P</h3>
+      <p>Department of CSE (Cyber Security)</p>
+      <p>Pre-Final Year</p>
+      <a href="https://www.linkedin.com/in/udhayakumar0307" target="https://www.linkedin.com/in/udhayakumar0307">LinkedIn Profile</a>
+    </div>    
+  </div>
+
+</body>
+</html>
