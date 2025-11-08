@@ -4,61 +4,88 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Real-Time Hardware-Based Prevention and Detection from Cyberattacks in IIoT</title>
+
+  <!-- particles.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
   <style>
+    /* ===== Professional Dark Cyber Theme ===== */
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #0a1f33;
-      color: #e0f7ff;
+      color: #ffffff;
+      background: radial-gradient(circle at center, #030303 20%, #000000 100%);
+      overflow-x: hidden;
+      position: relative;
     }
 
+    /* Particle Background */
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background: linear-gradient(180deg, #020202 0%, #010101 100%);
+    }
+
+    /* ===== Header ===== */
     header {
       text-align: center;
-      padding: 50px 20px 20px;
-      background-color: #001f3f;
-      color: #00ffff;
+      padding: 70px 20px 40px;
+      background: rgba(0, 0, 0, 0.9);
+      border-bottom: 1px solid #ffffff;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
     }
 
     header h1 {
       font-size: 28px;
       font-weight: bold;
-      margin: 0;
       text-transform: uppercase;
+      color: #ffffff;
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+      margin: 0;
+      letter-spacing: 1px;
     }
 
+    /* ===== Section Layout ===== */
     section {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 40px 10%;
+      padding: 60px 10%;
       flex-wrap: wrap;
-    }
-
-    section:nth-child(even) {
-      background-color: #001f3f;
-    }
-
-    section:nth-child(odd) {
-      background-color: #002b4f;
+      background: rgba(10, 10, 10, 0.88);
+      position: relative;
+      z-index: 1;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(6px);
     }
 
     .text {
       flex: 1;
-      min-width: 300px;
+      min-width: 320px;
       padding: 20px;
     }
 
     .text h2 {
-      color: #00ffff;
-      margin-bottom: 10px;
+      color: #ffffff;
+      margin-bottom: 12px;
       font-size: 22px;
-      border-left: 5px solid #00ffff;
+      border-left: 4px solid #ffffff;
       padding-left: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .text p {
-      line-height: 1.6;
+      line-height: 1.8;
+      color: #f1f1f1;
+      font-size: 16px;
     }
 
     .image {
@@ -67,177 +94,240 @@
     }
 
     .image img {
-      width: 80%;
-      max-width: 350px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,255,255,0.3);
+      width: 85%;
+      max-width: 400px;
+      border-radius: 12px;
+      border: 1px solid #ffffff;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
 
+    .image img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+    }
+
+    /* ===== Cards Section ===== */
     .cards {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 30px;
-      padding: 50px 10%;
-      background-color: #001f3f;
+      padding: 70px 10%;
+      background: rgba(5, 5, 5, 0.95);
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      z-index: 1;
+      position: relative;
     }
 
     .card {
-      background: #002b4f;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,255,255,0.2);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #ffffff;
+      border-radius: 15px;
       text-align: center;
-      padding: 20px;
-      width: 250px;
-      transition: transform 0.3s;
-      color: #e0f7ff;
+      padding: 25px;
+      width: 260px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      backdrop-filter: blur(6px);
     }
 
     .card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
     }
 
     .card img {
-      width: 100%;
-      height: auto;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
       object-fit: cover;
       margin-bottom: 15px;
-      border: 3px solid #00ffff;
-      border-radius: 10px;
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     }
 
     .card h3 {
       margin: 10px 0 5px;
-      color: #00ffff;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .card p {
       margin: 4px 0;
+      color: #e0e0e0;
+      font-size: 14px;
     }
 
     .card a {
-      color: #00ffff;
+      color: #ffffff;
       text-decoration: none;
       font-weight: bold;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s;
     }
 
     .card a:hover {
-      text-decoration: underline;
+      border-color: #ffffff;
     }
 
+    /* ===== Responsive ===== */
     @media (max-width: 768px) {
       section {
         flex-direction: column;
-        padding: 20px;
+        text-align: center;
       }
 
       .image img {
-        width: 100%;
-        max-width: 100%;
-      }
-
-      .cards {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-      }
-
-      .card {
         width: 90%;
+        margin-top: 20px;
       }
     }
   </style>
 </head>
 <body>
+  <!-- Animated Background -->
+  <div id="particles-js"></div>
 
+  <!-- Header -->
   <header>
     <h1>REAL-TIME HARDWARE BASED PREVENTION AND DETECTION FROM CYBERATTACKS IN IIOT</h1>
   </header>
 
+  <!-- Introduction -->
   <section>
     <div class="text">
       <h2>Introduction</h2>
-      <p>The Industrial Internet of Things (IIoT) connects smart sensors, controllers, and cloud systems to automate and optimize industrial operations. However, this interconnected ecosystem introduces cybersecurity risks, especially during wireless data transmission between devices and the cloud. Attackers can exploit these channels to intercept or corrupt industrial data.</p>
+      <p>The Industrial Internet of Things (IIoT) connects smart sensors, controllers, and cloud systems 
+         to automate and optimize industrial operations. However, this interconnected ecosystem introduces 
+         cybersecurity risks, especially during wireless data transmission between devices and the cloud. 
+         Attackers can exploit these channels to intercept or corrupt industrial data.</p>
     </div>
     <div class="image">
-      <img src="intro.png" alt="Introduction Image" />
+      <img src="iot.jpg" alt="Introduction Image">
     </div>
   </section>
 
+  <!-- Problem Statement -->
   <section>
     <div class="image">
-      <img src="problem.jpg" alt="Problem Statement Image" />
+      <img src="problem.jpg" alt="Problem Statement Image">
     </div>
     <div class="text">
       <h2>Problem Statement</h2>
-      <p>IIoT protocols like MQTT and HTTP prioritize performance over security. As a result, unencrypted or unauthenticated data can be intercepted, spoofed, or manipulated, causing production disruptions and compromising system reliability. The missing hardware–software security layer increases exposure to real-time attacks.</p>
+      <p>IIoT protocols like MQTT and HTTP prioritize performance over security. 
+         As a result, unencrypted or unauthenticated data can be intercepted, spoofed, or manipulated, 
+         causing production disruptions and compromising system reliability. 
+         The missing hardware–software security layer increases exposure to real-time attacks.</p>
     </div>
   </section>
 
+  <!-- Proposed Solution -->
   <section>
     <div class="text">
       <h2>Proposed Solution</h2>
-      <p>The system introduces a secure, hardware-backed communication model integrating AES encryption, SHA-256 hashing, consortium blockchain logging, and TinyML-based edge anomaly detection. This architecture ensures real-time prevention, detection, and response to cyber threats with minimal latency.</p>
+      <p>The system introduces a secure, hardware-backed communication model integrating AES encryption, 
+         SHA-256 hashing, consortium blockchain logging, and TinyML-based edge anomaly detection. 
+         This architecture ensures real-time prevention, detection, and response to cyber threats 
+         with minimal latency.</p>
     </div>
     <div class="image">
-      <img src="solution.png" alt="Proposed Solution Image" />
+      <img src="intro.png" alt="Proposed Solution Image">
     </div>
   </section>
 
+  <!-- Security Used -->
   <section>
     <div class="image">
-      <img src="Security.png" alt="Security Image" />
+      <img src="Security.png" alt="Security Image">
     </div>
     <div class="text">
       <h2>Security Used</h2>
       <p>
-        <strong>AES Encryption</strong> – Protects data confidentiality.<br />
-        <strong>SHA-256 Hashing</strong> – Ensures integrity and authenticity.<br />
-        <strong>Consortium Blockchain</strong> – Provides tamper-proof verification.<br />
-        <strong>TinyML Detection</strong> – Identifies anomalies locally.<br />
+        <strong>AES Encryption</strong> – Protects data confidentiality.<br>
+        <strong>SHA-256 Hashing</strong> – Ensures integrity and authenticity.<br>
+        <strong>Consortium Blockchain</strong> – Provides tamper-proof verification.<br>
+        <strong>TinyML Detection</strong> – Identifies anomalies locally.<br>
         <strong>Secure Cloud Dashboard</strong> – HTTPS + OAuth2 protection.
       </p>
     </div>
   </section>
 
+  <!-- Conclusion -->
   <section>
     <div class="text">
       <h2>Conclusion</h2>
-      <p>This framework delivers a real-time, intelligent, and resilient IIoT cybersecurity system. By combining encryption, blockchain, and AI-powered detection, it bridges the gap between hardware and cloud security — ensuring every data packet remains confidential, verifiable, and tamper-proof throughout its transmission journey.</p>
+      <p>This framework delivers a real-time, intelligent, and resilient IIoT cybersecurity system. 
+         By combining encryption, blockchain, and AI-powered detection, it bridges the gap between 
+         hardware and cloud security — ensuring every data packet remains confidential, verifiable, 
+         and tamper-proof throughout its transmission journey.</p>
     </div>
   </section>
 
+  <!-- Cards Section -->
   <div class="cards">
     <div class="card">
-      <img src="person2.jpg" alt="Jai Vignesh K" />
+      <img src="Person1.jpg" alt="Jai Vignesh">
       <h3>Jai Vignesh K</h3>
       <p>Department of CSE (Cyber Security)</p>
       <p>Pre-Final Year</p>
-      <p><strong>Role:</strong> Blockchain Analyst</p>
-      <p><strong>Skills:</strong> Encryption, Cloud Security</p>
       <a href="https://www.linkedin.com/in/jai-vignesh-91653b34b" target="_blank">LinkedIn Profile</a>
     </div>
 
     <div class="card">
-      <img src="person2.jpg" alt="Thirukumaran G" />
+      <img src="Person2.png" alt="Thirukumaran">
       <h3>Thirukumaran G</h3>
       <p>Department of CSE (Cyber Security)</p>
       <p>Pre-Final Year</p>
-      <p><strong>Role:</strong> TinyML Developer</p>
-      <p><strong>Skills:</strong> Edge AI, Anomaly Detection</p>
       <a href="https://www.linkedin.com/in/thirukumaran-g-ab5323327" target="_blank">LinkedIn Profile</a>
     </div>
 
     <div class="card">
-      <img src="Person3.jpg" alt="Udhayakumar P" />
+      <img src="Person3.jpg" alt="Udhayakumar">
       <h3>Udhayakumar P</h3>
       <p>Department of CSE (Cyber Security)</p>
       <p>Pre-Final Year</p>
-      <p><strong>Role:</strong> IDS/IPS Architect</p>
-      <p><strong>Skills:</strong> Snort, AES, Flask, Blockchain</p>
       <a href="https://www.linkedin.com/in/udhayakumar0307" target="_blank">LinkedIn Profile</a>
-    </div>
+    </div>    
   </div>
 
+  <!-- Particles.js Configuration -->
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 160, "density": { "enable": true, "value_area": 900 } },
+        "color": { "value": "#e0e0e0" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.9 },
+        "size": { "value": 2.5, "random": true },
+        "line_linked": {
+          "enable": true,
+          "distance": 130,
+          "color": "#bfbfbf",
+          "opacity": 0.8,
+          "width": 1.4
+        },
+        "move": {
+          "enable": true,
+          "speed": 1.1,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "resize": true
+        },
+        "modes": {
+          "repulse": { "distance": 100, "duration": 0.4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
