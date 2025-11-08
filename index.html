@@ -5,22 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Real-Time Hardware-Based Prevention and Detection from Cyberattacks in IIoT</title>
 
-  <!-- particles.js library -->
+  <!-- particles.js -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
   <style>
-    /* ===== Clean Cyber Theme with Full Network Visibility ===== */
+    /* ===== Cyber Dark Theme ===== */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      color: #ffffff;
-      background: #000000;
+      color: #fff;
+      background: #000;
       overflow-x: hidden;
       position: relative;
     }
 
-    /* ===== Network Background ===== */
+    /* ===== Particle Background ===== */
     #particles-js {
       position: fixed;
       top: 0;
@@ -28,27 +28,27 @@
       width: 100%;
       height: 100%;
       z-index: 0;
-      background: radial-gradient(circle at center, #020202 0%, #000000 100%);
+      background: radial-gradient(circle at center, #020202 0%, #000 100%);
     }
 
     /* ===== Header ===== */
     header {
       text-align: center;
       padding: 70px 20px 40px;
-      background: none;
-      border-bottom: 1px solid #ffffff;
+      background: rgba(200, 200, 200, 0.25);
+      border-bottom: 1px solid #fff;
       position: relative;
       z-index: 1;
+      backdrop-filter: blur(4px);
     }
 
     header h1 {
       font-size: 26px;
       font-weight: bold;
       text-transform: uppercase;
-      color: #ffffff;
       margin: 0;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
       letter-spacing: 1px;
-      text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     }
 
     /* ===== Section Layout ===== */
@@ -58,23 +58,30 @@
       justify-content: space-between;
       flex-wrap: wrap;
       padding: 60px 10%;
-      background: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       position: relative;
       z-index: 1;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    section:nth-child(even) {
+      flex-direction: row-reverse;
     }
 
     .text {
       flex: 1;
       min-width: 320px;
-      padding: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1);
+      margin: 10px;
     }
 
     .text h2 {
-      color: #ffffff;
-      margin-bottom: 10px;
+      color: #fff;
+      margin-bottom: 12px;
       font-size: 22px;
-      border-left: 4px solid #ffffff;
+      border-left: 4px solid #fff;
       padding-left: 10px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -82,21 +89,22 @@
 
     .text p {
       line-height: 1.8;
-      color: #ffffff;
+      color: #f1f1f1;
       font-size: 16px;
-      text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+      text-align: justify;
     }
 
     .image {
       flex: 1;
       text-align: center;
+      margin: 10px;
     }
 
     .image img {
       width: 85%;
       max-width: 400px;
       border-radius: 12px;
-      border: 1px solid #ffffff;
+      border: 1px solid #fff;
       box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
       transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
@@ -113,15 +121,16 @@
       flex-wrap: wrap;
       gap: 30px;
       padding: 70px 10%;
-      background: none;
+      background: rgba(200, 200, 200, 0.25);
       border-top: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(6px);
       z-index: 1;
       position: relative;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid #ffffff;
+      background: rgba(0, 0, 0, 0.65); /* Transparency only inside */
+      border: 1px solid #fff;
       border-radius: 15px;
       text-align: center;
       padding: 25px;
@@ -140,12 +149,12 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 15px;
-      border: 2px solid #ffffff;
+      border: 2px solid #fff;
     }
 
     .card h3 {
       margin: 10px 0 5px;
-      color: #ffffff;
+      color: #fff;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -157,7 +166,7 @@
     }
 
     .card a {
-      color: #ffffff;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
       border-bottom: 1px solid transparent;
@@ -165,24 +174,46 @@
     }
 
     .card a:hover {
-      border-color: #ffffff;
+      border-color: #fff;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(200, 200, 200, 0.25);
+      color: #fff;
+      font-weight: 500;
+      letter-spacing: 1px;
+      border-top: 1px solid #fff;
+      backdrop-filter: blur(4px);
+      position: relative;
+      z-index: 1;
+    }
+
+    footer span {
+      font-weight: bold;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
     }
 
     /* ===== Responsive ===== */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 18px;
-      }
-
       section {
         flex-direction: column;
         text-align: center;
-        padding: 40px 6%;
+      }
+
+      .text {
+        margin-right: 0;
+        margin-bottom: 20px;
       }
 
       .image img {
         width: 90%;
-        margin-top: 20px;
+      }
+
+      header h1 {
+        font-size: 18px;
       }
 
       .text h2 {
@@ -225,15 +256,15 @@
 
   <!-- Problem Statement -->
   <section>
-    <div class="image">
-      <img src="problem.jpg" alt="Problem Statement Image">
-    </div>
     <div class="text">
       <h2>Problem Statement</h2>
       <p>IIoT protocols like MQTT and HTTP prioritize performance over security. 
          As a result, unencrypted or unauthenticated data can be intercepted, spoofed, or manipulated, 
          causing production disruptions and compromising system reliability. 
          The missing hardware–software security layer increases exposure to real-time attacks.</p>
+    </div>
+    <div class="image">
+      <img src="problem.jpg" alt="Problem Statement Image">
     </div>
   </section>
 
@@ -253,9 +284,6 @@
 
   <!-- Security Used -->
   <section>
-    <div class="image">
-      <img src="Security.png" alt="Security Image">
-    </div>
     <div class="text">
       <h2>Security Used</h2>
       <p>
@@ -265,6 +293,9 @@
         <strong>TinyML Detection</strong> – Identifies anomalies locally.<br>
         <strong>Secure Cloud Dashboard</strong> – HTTPS + OAuth2 protection.
       </p>
+    </div>
+    <div class="image">
+      <img src="Security.png" alt="Security Image">
     </div>
   </section>
 
@@ -283,7 +314,7 @@
   <div class="cards">
     <div class="card">
       <img src="Person1.jpg" alt="Jai Vignesh">
-      <h3>Jai Vignesh K</h3>
+      <h3>JAI VIGNESH K</h3>
       <p>Department of CSE (Cyber Security)</p>
       <p>Pre-Final Year</p>
       <a href="https://www.linkedin.com/in/jai-vignesh-91653b34b" target="_blank">LinkedIn Profile</a>
@@ -291,20 +322,25 @@
 
     <div class="card">
       <img src="Person2.png" alt="Thirukumaran">
-      <h3>Thirukumaran G</h3>
+      <h3>THIRUKUMARAN G</h3>
       <p>Department of CSE (Cyber Security)</p>
       <p>Pre-Final Year</p>
       <a href="https://www.linkedin.com/in/thirukumaran-g-ab5323327" target="_blank">LinkedIn Profile</a>
     </div>
 
     <div class="card">
-      <img src="Person3.jpg" alt="Udhayakumar">
-      <h3>Udhayakumar P</h3>
+      <img src="Person3.png" alt="Udhayakumar">
+      <h3>UDHAYAKUMAR P</h3>
       <p>Department of CSE (Cyber Security)</p>
       <p>Pre-Final Year</p>
       <a href="https://www.linkedin.com/in/udhayakumar0307" target="_blank">LinkedIn Profile</a>
-    </div>    
+    </div>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made by <span>Udhaya</span></p>
+  </footer>
 
   <!-- Particles.js Configuration -->
   <script>
@@ -344,6 +380,5 @@
       "retina_detect": true
     });
   </script>
-
 </body>
 </html>
