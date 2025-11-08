@@ -34,12 +34,15 @@
     /* ===== Header ===== */
     header {
       text-align: center;
-      padding: 70px 20px 40px;
+      padding: 70px 10px 40px;
       background: rgba(200, 200, 200, 0.25);
       border-bottom: 1px solid #fff;
       position: relative;
       z-index: 1;
       backdrop-filter: blur(4px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     header h1 {
@@ -49,6 +52,8 @@
       margin: 0;
       text-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
       letter-spacing: 1px;
+      max-width: 90%;
+      line-height: 1.5;
     }
 
     /* ===== Section Layout ===== */
@@ -57,10 +62,11 @@
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding: 60px 10%;
+      padding: 60px 8%;
       position: relative;
       z-index: 1;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      box-sizing: border-box;
     }
 
     section:nth-child(even) {
@@ -70,11 +76,11 @@
     .text {
       flex: 1;
       min-width: 320px;
-      background: rgba(200, 200, 200, 0.25); /* Equal transparency to header */
+      background: rgba(200, 200, 200, 0.25);
       padding: 25px;
-      border-radius: 10px;
+      border-radius: 12px;
       box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.1);
-      margin: 10px;
+      margin: 15px;
       backdrop-filter: blur(4px);
     }
 
@@ -98,7 +104,7 @@
     .image {
       flex: 1;
       text-align: center;
-      margin: 10px;
+      margin: 15px;
     }
 
     .image img {
@@ -129,7 +135,7 @@
     }
 
     .card {
-      background: #111; /* Solid dark background inside only */
+      background: #111;
       border: 1px solid #fff;
       border-radius: 15px;
       text-align: center;
@@ -198,6 +204,17 @@
 
     /* ===== Responsive ===== */
     @media (max-width: 768px) {
+      header {
+        padding: 50px 15px 30px;
+      }
+
+      header h1 {
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: center;
+        max-width: 95%;
+      }
+
       section {
         flex-direction: column;
         text-align: center;
@@ -207,6 +224,23 @@
       .text {
         margin-bottom: 25px;
         width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      .text h2 {
+        font-size: 18px;
+        text-align: center;
+        border-left: none;
+        border-bottom: 2px solid #fff;
+        padding-left: 0;
+        padding-bottom: 5px;
+        display: inline-block;
+      }
+
+      .text p {
+        font-size: 14px;
+        text-align: justify;
       }
 
       .image img {
@@ -214,26 +248,14 @@
         max-width: 350px;
       }
 
-      header h1 {
-        font-size: 18px;
-        line-height: 1.4;
-      }
-
-      .text h2 {
-        font-size: 18px;
-      }
-
-      .text p {
-        font-size: 14px;
-      }
-
-      .card {
-        width: 85%;
-      }
-
       .cards {
         gap: 20px;
         padding: 50px 5%;
+      }
+
+      .card {
+        width: 90%;
+        margin: 0 auto;
       }
 
       footer {
