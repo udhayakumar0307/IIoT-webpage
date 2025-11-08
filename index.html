@@ -70,11 +70,12 @@
     .text {
       flex: 1;
       min-width: 320px;
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(200, 200, 200, 0.25); /* Equal transparency to header */
       padding: 25px;
       border-radius: 10px;
-      box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1);
+      box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.1);
       margin: 10px;
+      backdrop-filter: blur(4px);
     }
 
     .text h2 {
@@ -124,7 +125,7 @@
       position: relative;
       z-index: 1;
       border-top: 1px solid rgba(255, 255, 255, 0.2);
-      background: transparent; /* Removed transparency */
+      background: transparent;
     }
 
     .card {
@@ -200,19 +201,22 @@
       section {
         flex-direction: column;
         text-align: center;
+        padding: 40px 5%;
       }
 
       .text {
-        margin-right: 0;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
+        width: 100%;
       }
 
       .image img {
         width: 90%;
+        max-width: 350px;
       }
 
       header h1 {
         font-size: 18px;
+        line-height: 1.4;
       }
 
       .text h2 {
@@ -225,6 +229,16 @@
 
       .card {
         width: 85%;
+      }
+
+      .cards {
+        gap: 20px;
+        padding: 50px 5%;
+      }
+
+      footer {
+        font-size: 14px;
+        padding: 15px;
       }
     }
   </style>
