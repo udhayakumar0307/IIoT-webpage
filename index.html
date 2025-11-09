@@ -40,9 +40,6 @@
       position: relative;
       z-index: 1;
       backdrop-filter: blur(4px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
     header h1 {
@@ -52,7 +49,6 @@
       margin: 0;
       text-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
       letter-spacing: 1px;
-      max-width: 90%;
       line-height: 1.5;
     }
 
@@ -60,12 +56,12 @@
     section {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
+      gap: 30px;
       padding: 60px 8%;
       position: relative;
       z-index: 1;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       box-sizing: border-box;
     }
 
@@ -74,14 +70,14 @@
     }
 
     .text {
-      flex: 1;
-      min-width: 320px;
+      flex: 1 1 350px;
       background: rgba(200, 200, 200, 0.25);
       padding: 25px;
       border-radius: 12px;
       box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.1);
-      margin: 15px;
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(6px);
+      max-width: 550px;
+      text-align: justify;
     }
 
     .text h2 {
@@ -98,22 +94,25 @@
       line-height: 1.8;
       color: #f1f1f1;
       font-size: 16px;
-      text-align: justify;
     }
 
     .image {
-      flex: 1;
-      text-align: center;
-      margin: 15px;
+      flex: 1 1 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .image img {
-      width: 85%;
-      max-width: 400px;
+      width: 100%;
+      max-width: 420px;
+      height: auto;
       border-radius: 12px;
       border: 1px solid #fff;
       box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
       transition: transform 0.5s ease, box-shadow 0.5s ease;
+      display: block;
+      margin: 0 auto;
     }
 
     .image img:hover {
@@ -131,17 +130,17 @@
       position: relative;
       z-index: 1;
       border-top: 1px solid rgba(255, 255, 255, 0.2);
-      background: transparent;
     }
 
     .card {
-      background: #111;
+      background: rgba(255, 255, 255, 0.1);
       border: 1px solid #fff;
       border-radius: 15px;
       text-align: center;
       padding: 25px;
       width: 260px;
       transition: transform 0.3s, box-shadow 0.3s;
+      backdrop-filter: blur(4px);
     }
 
     .card:hover {
@@ -162,7 +161,6 @@
       margin: 10px 0 5px;
       color: #fff;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
     }
 
     .card p {
@@ -189,8 +187,6 @@
       padding: 20px;
       background: rgba(200, 200, 200, 0.25);
       color: #fff;
-      font-weight: 500;
-      letter-spacing: 1px;
       border-top: 1px solid #fff;
       backdrop-filter: blur(4px);
       position: relative;
@@ -202,38 +198,27 @@
       text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
     }
 
-    /* ===== Responsive ===== */
+    /* ===== Responsive Design ===== */
     @media (max-width: 768px) {
-      header {
-        padding: 50px 15px 30px;
-      }
-
-      header h1 {
-        font-size: 18px;
-        line-height: 1.5;
-        text-align: center;
-        max-width: 95%;
-      }
-
       section {
         flex-direction: column;
-        text-align: center;
         padding: 40px 5%;
+        text-align: center;
+      }
+
+      section:nth-child(even) {
+        flex-direction: column;
       }
 
       .text {
-        margin-bottom: 25px;
         width: 100%;
-        text-align: center;
-        box-sizing: border-box;
+        margin-bottom: 20px;
       }
 
       .text h2 {
         font-size: 18px;
-        text-align: center;
         border-left: none;
         border-bottom: 2px solid #fff;
-        padding-left: 0;
         padding-bottom: 5px;
         display: inline-block;
       }
@@ -243,9 +228,15 @@
         text-align: justify;
       }
 
+      .image {
+        width: 100%;
+        text-align: center;
+      }
+
       .image img {
         width: 90%;
         max-width: 350px;
+        margin: 0 auto;
       }
 
       .cards {
@@ -255,22 +246,18 @@
 
       .card {
         width: 90%;
-        margin: 0 auto;
       }
 
       footer {
         font-size: 14px;
-        padding: 15px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Particle Background -->
   <div id="particles-js"></div>
 
-  <!-- Header -->
   <header>
     <h1>REAL-TIME HARDWARE BASED PREVENTION AND DETECTION FROM CYBERATTACKS IN IIOT</h1>
   </header>
@@ -321,13 +308,11 @@
   <section>
     <div class="text">
       <h2>Security Used</h2>
-      <p>
-        <strong>AES Encryption</strong> – Protects data confidentiality.<br>
-        <strong>SHA-256 Hashing</strong> – Ensures integrity and authenticity.<br>
-        <strong>Consortium Blockchain</strong> – Provides tamper-proof verification.<br>
-        <strong>TinyML Detection</strong> – Identifies anomalies locally.<br>
-        <strong>Secure Cloud Dashboard</strong> – HTTPS + OAuth2 protection.
-      </p>
+      <p><strong>AES Encryption</strong> – Protects data confidentiality.<br>
+         <strong>SHA-256 Hashing</strong> – Ensures integrity and authenticity.<br>
+         <strong>Consortium Blockchain</strong> – Provides tamper-proof verification.<br>
+         <strong>TinyML Detection</strong> – Identifies anomalies locally.<br>
+         <strong>Secure Cloud Dashboard</strong> – HTTPS + OAuth2 protection.</p>
     </div>
     <div class="image">
       <img src="Security.png" alt="Security Image">
@@ -345,7 +330,7 @@
     </div>
   </section>
 
-  <!-- Cards Section -->
+  <!-- Cards -->
   <div class="cards">
     <div class="card">
       <img src="Person1.jpg" alt="Jai Vignesh">
@@ -372,12 +357,10 @@
     </div>
   </div>
 
-  <!-- Footer -->
   <footer>
     <p>Made by <span>Udhaya</span></p>
   </footer>
 
-  <!-- Particles.js Configuration -->
   <script>
     particlesJS("particles-js", {
       "particles": {
@@ -396,9 +379,6 @@
         "move": {
           "enable": true,
           "speed": 1.3,
-          "direction": "none",
-          "random": false,
-          "straight": false,
           "out_mode": "out"
         }
       },
@@ -408,12 +388,11 @@
           "onhover": { "enable": true, "mode": "repulse" },
           "resize": true
         },
-        "modes": {
-          "repulse": { "distance": 100, "duration": 0.4 }
-        }
+        "modes": { "repulse": { "distance": 100, "duration": 0.4 } }
       },
       "retina_detect": true
     });
   </script>
+
 </body>
 </html>
